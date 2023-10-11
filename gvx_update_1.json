@@ -3,5 +3,6 @@
   "title":"Update Available!",
   "subtitle":"Gamelist added on patch 7, you can Update now",
   "btnText":"Update",
-  "url":"https://fahrezone.my.id/GVortex"
+  "url":"https://fahrezone.my.id/GVortex",
+  "canCancel":true
 }
