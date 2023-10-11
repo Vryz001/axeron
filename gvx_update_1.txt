@@ -2,6 +2,7 @@ Json {
   key:version_code = 3260
   key:title = "Update Boss"
   key:subtitle = "Update udah tersedia boss"
+  key:btn_visibility = true
   key:btn_text = "Update Now"
   key:url = false
   key:cancelable = false
