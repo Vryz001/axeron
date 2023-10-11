@@ -1,8 +1,9 @@
-{
-  "vCode":"3260",
-  "title":"Update Available!",
-  "subtitle":"Gamelist added on patch 7, you can Update now",
-  "btnText":"Update",
-  "url":"https://fahrezone.my.id/GVortex",
-  "canCancel":true
+Json {
+  key:version_code = 3260
+  key:title = "Update Boss"
+  key:subtitle = "Update udah tersedia boss"
+  key:btn_text = "Update Now"
+  key:url = false
+  key:cancelable = false
 }
+//tes boss
