@@ -5,6 +5,6 @@ Json {
   key:btn_visibility = false;
   key:btn_text = "Update Now";
   key:url = "https://google.com";
-  key:cancelable = false;
+  key:cancelable = true;
 }
 //tes boss
