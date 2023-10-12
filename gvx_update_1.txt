@@ -1,10 +1,10 @@
 Json {
   key:version_code = 3260;
-  key:title = "Update Boss";
-  key:subtitle = "Update udah tersedia boss";
+  key:title = "Ngetes Boss";
+  key:subtitle = "ngetesss dulu boss";
   key:btn_visibility = false;
   key:btn_text = "Update Now";
   key:url = "https://google.com";
-  key:cancelable = true;
+  key:cancelable = false;
 }
 //tes boss
