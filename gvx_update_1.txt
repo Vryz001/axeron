@@ -1,5 +1,5 @@
 Json {
-  key:version_code = 3260;
+  key:version_code = 1;
   key:title = "Ngetes Boss";
   key:subtitle = "ngetesss dulu boss";
   key:btn_visibility = false;
