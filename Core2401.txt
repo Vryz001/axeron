@@ -1,5 +1,9 @@
 Json {
-key:versionCode=240114;
-key:title="Update";
-key:desc="anjay";
+  key:versionCode = 2;
+  key:title = "Update Available";
+  key:subtitle = "You can Update GVX now!";
+  key:btnVisible = true;
+  key:btnText = "Update Now";
+  key:url = "https://youtu.be/jdOoOTatnw4?si=FZv5SEIKkJrYddWd";
+  key:cancelable = false;
 }
