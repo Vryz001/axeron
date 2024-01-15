@@ -1,4 +1,4 @@
-Optione {
+Json {
 key:versionCode=240114;
 key:title="Update";
 key:desc="anjay";
