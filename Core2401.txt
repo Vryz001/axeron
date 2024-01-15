@@ -1,5 +1,5 @@
 Json {
-  key:versionCode = 2;
+  key:versionCode = 102;
   key:title = "Update Available";
   key:subtitle = "You can Update GVX now!";
   key:btnVisible = true;
