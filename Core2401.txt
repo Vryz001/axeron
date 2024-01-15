@@ -1,5 +1,5 @@
 Json {
-  key:versionCode = 101;
+  key:versionCode = 102;
   key:title = "AxeronCore need Update";
   key:subtitle = "Join my Telegram Channel to get new Version of AxeronCore";
   key:btnVisible = true;
