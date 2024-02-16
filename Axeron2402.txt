@@ -1,5 +1,5 @@
 Json {
-  key:axeronCode = 11240216;
+  key:axeronCode = 11240213;
   key:title = "Axeron update available";
   key:subtitle = "Axeron requires AxeronCore V3.0 (3000)";
   key:btnVisible = true;
