@@ -1,5 +1,5 @@
 Json {
-  key:axeronCode = 11240221;
+  key:axeronCode = 11240210;
   key:title = "Testing!";
   key:subtitle = "Dialog muncul? Screenshot, kirim ke grup VIP!";
   key:btnVisible = true;
