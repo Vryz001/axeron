@@ -1,7 +1,7 @@
 Json {
-  key:axeronCode = 11240213;
-  key:title = "Axeron update available";
-  key:subtitle = "Axeron requires AxeronCore V3.0 (3000)";
+  key:axeronCode = 11240221;
+  key:title = "Testing!";
+  key:subtitle = "Dialog muncul? Screenshot, kirim ke grup VIP!";
   key:btnVisible = true;
   key:btnText = "Update";
   key:url = "https://t.me/fahrezone_ch/218";
