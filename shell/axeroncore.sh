@@ -66,15 +66,14 @@ optimize_app() {
 }
 
 echo ""
-if [ ! "$AXERON" ]; then
-    echo "$w This Core only can Executed in Axeron"
-    c_exit
-fi
-
-if ! echo "$CORE" | grep -q "$this_core"; then
-    echo "$w You must use the original version of Axeron"
-    join_channel
-    c_exit
+if [ "$AXERON" ]; then
+    if ! echo "$CORE" | grep -q "$this_core"; then
+        echo "$w You must use the original version of Axeron"
+        join_channel
+        c_exit
+    fi
+else
+    PACKAGES=$(cmd package list packages -3 | sed 's/package://')
 fi
 
 if [ ! "$dev" == "$dev_sign" ]; then
