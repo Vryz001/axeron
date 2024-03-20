@@ -22,8 +22,8 @@ axeron_core=$(cat axeron.prop)
 echo $axeron_core
 dev=$(echo "$axeron_core" | grep -o 'key:dev=".*";' | cut -d '"' -f2)
 axeron_core=${axeron_core//\$pkg/$1}
-vCode=4001
-vName="Auto Update"
+vCode=4100
+vName="V4.1 ShellStorm"
 vAxeron=10240121
 androidId=$(settings get secure android_id)
 
