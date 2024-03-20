@@ -17,6 +17,7 @@ id_path="/axeron/id_1.txt"
 log_path="/sdcard/Android/data/${axeron}/files"
 log_file="${log_path}/log.txt"
 this_core=$(dumpsys package ${axeron} | grep "signatures" | cut -d '[' -f 2 | cut -d ']' -f 1)
+echo $(dirname $0)
 axeron_core=$(cd $(dirname $0) && cat axeron.prop)
 dev=$(echo "$axeron_core" | grep -o 'key:dev=".*";' | cut -d '"' -f2)
 axeron_core=${axeron_core//\$pkg/$1}
