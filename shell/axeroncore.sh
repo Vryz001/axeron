@@ -17,8 +17,8 @@ id_path="/axeron/id_1.txt"
 log_path="/sdcard/Android/data/${axeron}/files"
 log_file="${log_path}/log.txt"
 this_core=$(dumpsys package ${axeron} | grep "signatures" | cut -d '[' -f 2 | cut -d ']' -f 1)
-echo $(cd "$(dirname "$0")" && pwd)
-axeron_core=$(cd $(dirname $BASH_SOURCE) && cat axeron.prop)
+echo $(pwd)
+axeron_core=$(cd $(dirname $0) && cat axeron.prop)
 dev=$(echo "$axeron_core" | grep -o 'key:dev=".*";' | cut -d '"' -f2)
 axeron_core=${axeron_core//\$pkg/$1}
 vCode=4001
