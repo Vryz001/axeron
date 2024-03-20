@@ -5,6 +5,7 @@ w="[ ! ]" #warn
 i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
+cd $(pwd)
 parent_app="$1"
 dev_sign="$2"
 brevent="me.piebridge.brevent"
@@ -17,8 +18,8 @@ id_path="/axeron/id_1.txt"
 log_path="/sdcard/Android/data/${axeron}/files"
 log_file="${log_path}/log.txt"
 this_core=$(dumpsys package ${axeron} | grep "signatures" | cut -d '[' -f 2 | cut -d ']' -f 1)
-echo $(cd $(pwd) && cat axeron.prop)
-axeron_core=$(cd $(pwd) && cat axeron.prop)
+echo $(cat axeron.prop)
+axeron_core=$(cat axeron.prop)
 dev=$(echo "$axeron_core" | grep -o 'key:dev=".*";' | cut -d '"' -f2)
 axeron_core=${axeron_core//\$pkg/$1}
 vCode=4001
