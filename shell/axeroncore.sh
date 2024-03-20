@@ -114,11 +114,7 @@ else
 fi
 
 if echo $PACKAGES | grep -qw "$axeron"; then
-  if ping -c 1 8.8.8.8 > /dev/null 2>&1; then
-    echo "$s Axeron is detected [Fast Connect]" && sleep 1
-  else
-    echo "$w There is no internet network to Access Axeron" && c_exit
-  fi
+  echo "$s Axeron is detected [Fast Connect]" && sleep 1
 else
   echo "$w Axeron not Installed"
   echo "$i Please download Axeron app from FahrezONE officially"
