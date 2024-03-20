@@ -20,8 +20,8 @@ this_core=$(dumpsys package ${axeron} | grep "signatures" | cut -d '[' -f 2 | cu
 axeron_core=$(cd $(dirname $0) && cat axeron.prop)
 dev=$(echo "$axeron_core" | grep -o 'key:dev=".*";' | cut -d '"' -f2)
 axeron_core=${axeron_core//\$pkg/$1}
-vCode=4000
-vName="V4.0 (Axeron Only)"
+vCode=4001
+vName="Auto Update"
 vAxeron=10240121
 androidId=$(settings get secure android_id)
 
