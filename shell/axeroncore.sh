@@ -109,7 +109,7 @@ check_optimize() {
 check_optimize $time_diff
 
 if command -v am > /dev/null && command -v pm > /dev/null; then
-  echo "$p Executing AxeronCore [${vName}(${vCode})]" && sleep 1
+  echo "$p Executing AxeronCore [${vName} (${vCode})]" && sleep 1
 else
   echo "$w ActivityManager & PackageManager not Permitted" && c_exit
 fi
