@@ -48,7 +48,7 @@ join_channel() {
 
 c_exit() {
   echo ""
-  core_path="/sdcard/Android/data/${axeron}/files/core.sh"
+  core_path=$0
   [ -f "$core_path" ] && rm -f "$core_path" > /dev/null 2>&1
   exit 0
 }
