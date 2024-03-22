@@ -91,7 +91,7 @@ else
     PACKAGES=$(cmd package list packages -3 | sed 's/package://')
 fi
 
-if [ "$DEV" != "$dev_sign" ]; then
+if [ $DEV != $dev_sign ]; then
     echo "$w Developer signature is invalid"
     c_exit
 fi
