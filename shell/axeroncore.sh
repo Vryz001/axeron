@@ -5,7 +5,7 @@ w="[ ! ]" #warn
 i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
-cd $(dirname $0)
+cd $(pwd)
 dos2unix axeron.prop
 source axeron.prop
 brevent="me.piebridge.brevent"
@@ -93,11 +93,6 @@ else
 fi
 
 if [ -n "$runPackage" ]; then
-echo '$runPackage'
-echo '$PACKAGES'
-echo "$runPackage"
-echo "com.mobile.legends" | od -c
-echo $runPackage | od -c
   if echo "$PACKAGES" | grep -w $runPackage;then
     sleep 1
   else
