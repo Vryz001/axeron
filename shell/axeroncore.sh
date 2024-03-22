@@ -6,6 +6,7 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(dirname $0)
+dos2unix axeron.prop
 source axeron.prop
 brevent="me.piebridge.brevent"
 axeron="com.fhrz.axeron"
