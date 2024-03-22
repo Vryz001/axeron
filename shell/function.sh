@@ -15,5 +15,6 @@ shellstorm() {
 api=$1
 path=$2
 am startservice -n com.fhrz.axeron/.ShellStorm --es api $api --es path $path > /dev/null
+while [ ! -f response ]; do :; done;
 cat $path/response
 }
