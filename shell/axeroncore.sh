@@ -23,18 +23,18 @@ vAxeron=10240121
 androidId=$(settings get secure android_id)
 
 source axeron.prop
-if [-z $PARENTAPP]; then
+if [ -z "$PARENTAPP" ]; then
   PARENTAPP="$1"
 fi
   
 axeron_core=$(cat <<-EOF
 Option {
-  key:title=${TITLE};
-  key:dev=${DEV};
-  key:desc=${DESC};
-  key:parentApp=${PARENTAPP};
-  key:install=${INSTALL};
-  key:remove=${REMOVE};
+  key:title="$TITLE";
+  key:dev="$DEV";
+  key:desc="$DESC";
+  key:parentApp="$PARENTAPP";
+  key:install="$INSTALL";
+  key:remove="$REMOVE";
 }
 EOF
 )
