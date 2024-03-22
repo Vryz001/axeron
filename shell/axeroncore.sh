@@ -6,6 +6,7 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(dirname $0)
+ls
 brevent="me.piebridge.brevent"
 axeron="com.fhrz.axeron"
 termux="com.termux"
@@ -22,7 +23,6 @@ vAxeron=10240121
 androidId=$(settings get secure android_id)
 
 source axeron.prop
-echo "test"
 echo $EXECPATH
 echo $PACKAGES
 echo $runPackage
