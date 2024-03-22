@@ -95,6 +95,7 @@ if [ -n "$runPackage" ]; then
 echo '$runPackage'
 echo '$PACKAGES'
 echo "$runPackage"
+echo $runPackage | od -c
   if echo "$PACKAGES" | grep -w $runPackage;then
     sleep 1
   else
