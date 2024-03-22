@@ -30,7 +30,7 @@ if [ -z "$PARENTAPP" ]; then
 fi
   
 axeron_core=$(cat <<-EOF
-Option {
+Optione {
   key:title="$TITLE";
   key:dev="$DEV";
   key:desc="$DESC";
