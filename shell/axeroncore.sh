@@ -22,22 +22,21 @@ vAxeron=10240121
 androidId=$(settings get secure android_id)
 
 source axeron.prop
-if [ -z "$PARENTAPP" ]; then
-  PARENTAPP="$1"
+if [ -z "$runPackage" ]; then
+  runPackage="$1"
 fi
-dev_sign="$2"
-echo "$AUTHOR"
-echo "$dev_sign"
   
 axeron_core=$(cat <<-EOF
 Optione {
-  key:title="$TITLE";
-  key:version=${VERSION};
-  key:dev="$AUTHOR";
-  key:desc="$DESC";
-  key:parentApp="$PARENTAPP";
-  key:install="$INSTALL";
-  key:remove="$REMOVE";
+  key:id="$id"
+  key:title="$name";
+  key:version=${version};
+  key:version=${versionCode};
+  key:dev="$author";
+  key:desc="$description";
+  key:parentApp="$runPackage";
+  key:install="$install";
+  key:remove="$remove";
 }
 EOF
 )
@@ -92,13 +91,8 @@ else
     PACKAGES=$(cmd package list packages -3 | sed 's/package://')
 fi
 
-if [ "$AUTHOR" != "$dev_sign" ]; then
-    echo "$w Developer signature is invalid"
-    c_exit
-fi
-
-if [ -n "$PARENTAPP" ]; then
-  if echo $PACKAGES | grep -qw "$PARENTAPP"; then
+if [ -n "$runPackage" ]; then
+  if echo $PACKAGES | grep -qw "$runPackage"; then
     sleep 1
   else
     echo "$w PackageName is not detected or installed" && c_exit
