@@ -1,1 +1,1 @@
-cd $(dirname $0); source axeron.function; check_axeron; !myCommands
+source $(dirname $0)/axeron.function; check_axeron; !myCommands
