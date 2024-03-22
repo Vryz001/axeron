@@ -24,6 +24,8 @@ androidId=$(settings get secure android_id)
 
 if [ -z "$runPackage" ]; then
   runPackage="$1"
+  else
+  runPackage="$runPackage"
 fi
   
 axeron_core=$(cat <<-EOF
