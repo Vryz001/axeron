@@ -22,6 +22,7 @@ vAxeron=10240121
 androidId=$(settings get secure android_id)
 
 source axeron.prop
+echo "test"
 echo $EXECPATH
 echo $PACKAGES
 echo $runPackage
