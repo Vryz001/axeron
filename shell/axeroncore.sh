@@ -6,7 +6,6 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(dirname $0)
-ls
 brevent="me.piebridge.brevent"
 axeron="com.fhrz.axeron"
 termux="com.termux"
