@@ -23,6 +23,7 @@ vAxeron=10240121
 androidId=$(settings get secure android_id)
 
 source axeron.prop
+echo $DEV
 if [ -z "$PARENTAPP" ]; then
   PARENTAPP="$1"
 fi
