@@ -1,6 +1,6 @@
-AXERON=true;
-CORE="d8a97692ad1e71b1";
-EXECPATH=$(dirname $0); 
+AXERON=true
+CORE="d8a97692ad1e71b1"
+EXECPATH=$(dirname $0)
 PACKAGES=$(cat ${EXECPATH}/packages.list)
 this_core=$(dumpsys package "com.fhrz.axeron" | grep "signatures" | cut -d '[' -f 2 | cut -d ']' -f 1)
 
