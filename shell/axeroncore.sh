@@ -21,7 +21,7 @@ vName="V4.1 ShellStorm"
 vAxeron=10240121
 androidId=$(settings get secure android_id)
 
-source /axeron.prop
+source axeron.prop
 echo $(pwd)
 if [ -z "$runPackage" ]; then
   runPackage="$1"
