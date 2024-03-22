@@ -6,7 +6,6 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(dirname $0)
-ls
 source axeron.prop
 brevent="me.piebridge.brevent"
 axeron="com.fhrz.axeron"
@@ -26,7 +25,6 @@ androidId=$(settings get secure android_id)
 echo $EXECPATH
 echo $PACKAGES
 echo $runPackage
-tes=$runPackage
 if [ -z "$runPackage" ]; then
   runPackage="$1"
 fi
@@ -97,7 +95,7 @@ else
 fi
 
 if [ -n "$runPackage" ]; then
-  if echo $PACKAGES | grep -qw "$tes"; then
+  if echo $PACKAGES | grep -qw "$runPackage"; then
     sleep 1
   else
     echo "$w PackageName is not detected or installed" && c_exit
