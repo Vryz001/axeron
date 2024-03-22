@@ -26,7 +26,7 @@ source axeron.prop
 echo $EXECPATH
 echo $PACKAGES
 echo $runPackage
-tes $runPackage
+tes=$runPackage
 if [ -z "$runPackage" ]; then
   runPackage="$1"
 fi
@@ -97,7 +97,7 @@ else
 fi
 
 if [ -n "$runPackage" ]; then
-  if echo $PACKAGES | grep -qw "$runPackage"; then
+  if echo $PACKAGES | grep -qw "$tes"; then
     sleep 1
   else
     echo "$w PackageName is not detected or installed" && c_exit
