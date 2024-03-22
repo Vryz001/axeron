@@ -6,7 +6,6 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(dirname $0)
-runPackage=""
 source axeron.prop
 brevent="me.piebridge.brevent"
 axeron="com.fhrz.axeron"
@@ -25,8 +24,6 @@ androidId=$(settings get secure android_id)
 
 if [ -z "$runPackage" ]; then
   runPackage="$1"
-  else
-  runPackage="$runPackage"
 fi
   
 axeron_core=$(cat <<-EOF
