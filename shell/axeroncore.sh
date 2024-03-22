@@ -6,7 +6,6 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(pwd)
-dev_sign="$2"
 brevent="me.piebridge.brevent"
 axeron="com.fhrz.axeron"
 termux="com.termux"
@@ -23,11 +22,12 @@ vAxeron=10240121
 androidId=$(settings get secure android_id)
 
 source axeron.prop
-echo $DEV
-echo $dev_sign
 if [ -z "$PARENTAPP" ]; then
   PARENTAPP="$1"
 fi
+dev_sign="$2"
+echo $DEV
+echo $dev_sign
   
 axeron_core=$(cat <<-EOF
 Optione {
