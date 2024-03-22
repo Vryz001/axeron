@@ -28,7 +28,7 @@ fi
   
 axeron_core=$(cat <<-EOF
 Optione {
-  key:id="$id"
+  key:id="$id";
   key:title="$name";
   key:version=${version};
   key:version=${versionCode};
