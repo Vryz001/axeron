@@ -26,13 +26,14 @@ if [ -z "$PARENTAPP" ]; then
   PARENTAPP="$1"
 fi
 dev_sign="$2"
-echo "$DEV"
+echo "$AUTHOR"
 echo "$dev_sign"
   
 axeron_core=$(cat <<-EOF
 Optione {
   key:title="$TITLE";
-  key:dev="$DEV";
+  key:version="$VERSION";
+  key:dev="$AUTHOR";
   key:desc="$DESC";
   key:parentApp="$PARENTAPP";
   key:install="$INSTALL";
