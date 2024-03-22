@@ -32,7 +32,7 @@ echo "$dev_sign"
 axeron_core=$(cat <<-EOF
 Optione {
   key:title="$TITLE";
-  key:version="$VERSION";
+  key:version=${VERSION};
   key:dev="$AUTHOR";
   key:desc="$DESC";
   key:parentApp="$PARENTAPP";
