@@ -6,7 +6,6 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(pwd)
-parent_app="$1"
 dev_sign="$2"
 brevent="me.piebridge.brevent"
 axeron="com.fhrz.axeron"
@@ -18,13 +17,27 @@ id_path="/axeron/id_1.txt"
 log_path="/sdcard/Android/data/${axeron}/files"
 log_file="${log_path}/log.txt"
 this_core=$(dumpsys package ${axeron} | grep "signatures" | cut -d '[' -f 2 | cut -d ']' -f 1)
-axeron_core=$(cat axeron.prop)
-dev=$(echo "$axeron_core" | grep -o 'key:dev=".*";' | cut -d '"' -f2)
-axeron_core=${axeron_core//\$pkg/$1}
 vCode=4100
 vName="V4.1 ShellStorm"
 vAxeron=10240121
 androidId=$(settings get secure android_id)
+
+source axeron.prop
+if [-z $PARENTAPP]; then
+  PARENTAPP="$1"
+fi
+  
+axeron_core=$(cat <<-EOF
+Option {
+  key:title=${TITLE};
+  key:dev=${DEV};
+  key:desc=${DESC};
+  key:parentApp=${PARENTAPP};
+  key:install=${INSTALL};
+  key:remove=${REMOVE};
+}
+EOF
+)
 
 core_info=$(cat <<-EOF
 Optione {
@@ -55,7 +68,7 @@ c_exit() {
 
 optimize_app() {
   for package in $(echo $PACKAGES | cut -d ":" -f 2); do
-      if [ "$package" = "$brevent" ] || [ "$package" = "$axeron" ] || [ "$package" = "$termux" ] || [ "$package" = "$shizuku" ] || [ "$package" = "$parent_app" ]; then
+      if [ "$package" = "$brevent" ] || [ "$package" = "$axeron" ] || [ "$package" = "$termux" ] || [ "$package" = "$shizuku" ] || [ "$package" = "$PARENTAPP" ]; then
         continue
       else
         cache_path="/sdcard/Android/data/${package}/cache"
@@ -76,13 +89,13 @@ else
     PACKAGES=$(cmd package list packages -3 | sed 's/package://')
 fi
 
-if [ ! "$dev" == "$dev_sign" ]; then
+if [ ! "$DEV" == "$dev_sign" ]; then
     echo "$w Developer signature is invalid"
     c_exit
 fi
 
-if [ -n "$parent_app" ]; then
-  if echo $PACKAGES | grep -qw "$parent_app"; then
+if [ -n "$PARENTAPP" ]; then
+  if echo $PACKAGES | grep -qw "$PARENTAPP"; then
     sleep 1
   else
     echo "$w PackageName is not detected or installed" && c_exit
