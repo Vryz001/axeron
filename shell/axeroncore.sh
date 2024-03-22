@@ -92,7 +92,11 @@ else
 fi
 
 if [ -n "$runPackage" ]; then
-  sleep 1
+  if echo "$PACKAGES" | grep -q "$runPackage"; then
+    sleep 1
+  else
+    echo "$w PackageName is not detected or installed" && c_exit
+  fi
 else
   echo "$w PackageName is empty" && c_exit
 fi
