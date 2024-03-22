@@ -92,7 +92,7 @@ else
 fi
 
 if [ "$DEV" != "$dev_sign" ]; then
-    echo "$w Developer signature is invalid"
+    echo "$w Developer signature is invalid yo"
     c_exit
 fi
 
