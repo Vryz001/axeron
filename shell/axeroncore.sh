@@ -22,7 +22,8 @@ vAxeron=10240121
 androidId=$(settings get secure android_id)
 
 source axeron.prop
-echo $(pwd)
+echo $PACKAGES
+echo $runPackage
 if [ -z "$runPackage" ]; then
   runPackage="$1"
 fi
