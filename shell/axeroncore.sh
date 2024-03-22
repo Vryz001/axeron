@@ -5,7 +5,7 @@ w="[ ! ]" #warn
 i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
-cd $(pwd)
+cd $(dirname $0)
 brevent="me.piebridge.brevent"
 axeron="com.fhrz.axeron"
 termux="com.termux"
@@ -22,6 +22,7 @@ vAxeron=10240121
 androidId=$(settings get secure android_id)
 
 source axeron.prop
+echo $EXECPATH
 echo $PACKAGES
 echo $runPackage
 if [ -z "$runPackage" ]; then
