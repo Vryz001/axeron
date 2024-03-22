@@ -24,6 +24,7 @@ androidId=$(settings get secure android_id)
 
 source axeron.prop
 echo $DEV
+echo $dev_sign
 if [ -z "$PARENTAPP" ]; then
   PARENTAPP="$1"
 fi
