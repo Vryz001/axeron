@@ -26,8 +26,8 @@ if [ -z "$PARENTAPP" ]; then
   PARENTAPP="$1"
 fi
 dev_sign="$2"
-echo $DEV
-echo $dev_sign
+echo "$DEV"
+echo "$dev_sign"
   
 axeron_core=$(cat <<-EOF
 Optione {
