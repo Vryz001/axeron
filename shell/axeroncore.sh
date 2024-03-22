@@ -26,6 +26,7 @@ source axeron.prop
 echo $EXECPATH
 echo $PACKAGES
 echo $runPackage
+tes $runPackage
 if [ -z "$runPackage" ]; then
   runPackage="$1"
 fi
