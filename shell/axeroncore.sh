@@ -32,7 +32,7 @@ Optione {
   key:id="$id";
   key:title="$name";
   key:version="$version";
-  key:version=${versionCode};
+  key:vcode=${versionCode};
   key:dev="$author";
   key:desc="$description";
   key:parentApp="$runPackage";
