@@ -7,6 +7,7 @@ p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(pwd)
 echo $(pwd)
+[ -f "response" ] && rm -f "response" > /dev/null 2>&1
 dos2unix axeron.prop
 source axeron.prop
 brevent="me.piebridge.brevent"
