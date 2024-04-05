@@ -65,7 +65,6 @@ join_channel() {
 
 c_exit() {
   echo ""
-  core_path="response"
   [ -f "response" ] && rm -f "response" > /dev/null 2>&1
   exit 0
 }
