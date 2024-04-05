@@ -23,3 +23,7 @@ shellstorm() {
   while [ ! -f $path/response ]; do sleep 1; done;
   cat $path/response
 }
+
+axeroncore() {
+  echo $(dirname $0)
+}
