@@ -32,12 +32,12 @@ fi
 axeron_core=$(cat <<-EOF
 Optione {
   key:id="$id";
-  key:title="$name";
-  key:verName="$version";
-  key:verCode=${versionCode};
-  key:dev="$author";
-  key:desc="$description";
-  key:parentApp="$runPackage";
+  key:name="$name";
+  key:version="$version";
+  key:versionCode=${versionCode};
+  key:author="$author";
+  key:description="$description";
+  key:runPackage="$runPackage";
   key:install="$install";
   key:remove="$remove";
 }
