@@ -1,1 +1,1 @@
-source /sdcard/Android/data/com.fhrz.axeron/files/axeron.function; check_axeron; !myCommands
+cp $TMPFUNC /data/local/tmp; chmod +x $FUNCTION; source $FUNCTION; check_axeron; !myCommands
