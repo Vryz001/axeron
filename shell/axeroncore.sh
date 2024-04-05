@@ -6,7 +6,7 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(pwd)
-echo $pwd
+echo $(pwd)
 dos2unix axeron.prop
 source axeron.prop
 brevent="me.piebridge.brevent"
