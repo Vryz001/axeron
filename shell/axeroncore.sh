@@ -21,11 +21,11 @@ log_path="/sdcard/Android/data/${axeron}/files"
 log_file="${log_path}/log.txt"
 this_core=$(dumpsys package ${axeron} | grep "signatures" | cut -d '[' -f 2 | cut -d ']' -f 1)
 vCode=4100
-vName="V4.1 ShellStorm"
+vName="V4.2 ShellStorm"
 vAxeron=10240121
 androidId=$(settings get secure android_id)
 
-if [ -z "$runPackage" ]; then
+if [ -n "$1" ]; then
   runPackage="$1"
 fi
   
