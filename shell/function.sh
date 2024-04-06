@@ -21,7 +21,7 @@ shellstorm() {
   else
     path=$EXECPATH
   fi
-  am startservice -n com.fhrz.axeron/.ShellStorm --es api $api --es path $path
+  am startservice -n com.fhrz.axeron/.ShellStorm --es api $api --es path $path > $path/log.txt
   while [ ! -f $path/response ]; do sleep 1; done;
   cat $path/response
 }
