@@ -1,4 +1,4 @@
- export AXERON=true
+export AXERON=true
 export CORE="d8a97692ad1e71b1"
 export EXECPATH=$(dirname $0)
 export PACKAGES=$(cat /sdcard/Android/data/com.fhrz.axeron/files/packages.list)
@@ -21,7 +21,7 @@ shellstorm() {
   else
     path=$EXECPATH
   fi
-  am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$path" > $path/log.txt
+  am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$path" > /dev/null
   while [ ! -f $path/response ]; do sleep 1; done;
   cat $path/response
 }
