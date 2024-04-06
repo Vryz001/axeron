@@ -17,25 +17,11 @@ check_axeron() {
 shellstorm() {
   local api="$1"
   local path="${2:-$EXECPATH}"
-  local timeout=10
-  local startservice_output
   
-  startservice_output=$(am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$path" 2>&1)
+  am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$path" > /dev/null
   
-  if [[ $? -ne 0 ]]; then
-    echo "Error: Failed to start service. $startservice_output"
-    return 1
-  fi
-  
-  local start_time=$(date +%s)
   while [[ ! -f "$path/response" || ! -f "$path/error" ]]; do
     sleep 1
-    local current_time=$(date +%s)
-    local elapsed_time=$((current_time - start_time))
-    if [[ $elapsed_time -gt $timeout ]]; then
-      echo "Error: Timeout waiting for response/error files."
-      return 1
-    fi
   done
   
   if [ -f "$path/response" ]; then
