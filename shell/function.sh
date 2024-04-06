@@ -22,8 +22,15 @@ shellstorm() {
     path=$EXECPATH
   fi
   am startservice -n com.fhrz.axeron/.ShellStorm --es api $api --es path $path > /dev/null
-  while [ ! -f $path/response ]; do sleep 1; done;
-  cat $path/response
+  while [ ! -f $path/response || ! -f "$path/error" ]]; do
+    sleep 1
+  done
+  
+  if [ -f "$path/response" ]; then
+    cat "$path/response"
+  else
+    cat "$path/error"
+  fi
 }
 
 
