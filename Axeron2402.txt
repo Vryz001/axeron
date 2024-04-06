@@ -1,9 +1,9 @@
 Json {
-  key:axeronCode = 14240404;
-  key:title = "Testing!";
-  key:subtitle = "Dialog muncul? Screenshot, kirim ke grup VIP!";
+  key:axeronCode = 16240407;
+  key:title = "Information";
+  key:subtitle = "Don't forget to join the official Axeron channel to get the latest Axeron info!";
   key:btnVisible = true;
-  key:btnText = "Update";
-  key:url = "https://t.me/fahrezone_ch/218";
+  key:btnText = "Join";
+  key:url = "https://t.me/fahrezone_ch/";
   key:cancelable = true;
 }
