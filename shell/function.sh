@@ -21,7 +21,7 @@ shellstorm() {
   else
     path=$EXECPATH
   fi
-  am startservice -n com.fhrz.axeron/.ShellStorm --es api $api --es path $path > /dev/null
+  am startservice -n com.fhrz.axeron/.ShellStorm --es api $api --es path $path
   while [[ ! -f $path/response || ! -f $path/error ]]; do
     sleep 1
   done
