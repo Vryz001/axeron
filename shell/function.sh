@@ -37,7 +37,7 @@ shellstorm() {
   am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$path" > /dev/null
   while [ ! -f "$path/response" ]; do sleep 1; done;
   cat $path/response
-  am stopservice -n com.fhrz.axeron/.ShellStor > /dev/nullt
+  am stopservice -n com.fhrz.axeron/.ShellStor > /dev/null
 }
 
 devcore() {
