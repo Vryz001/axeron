@@ -14,7 +14,7 @@ check_axeron() {
   fi
 }
 
-shellstorm() {
+bakshellstorm() {
   api=$1
   if [ -n $2 ]; then
     path=$2
@@ -27,7 +27,7 @@ shellstorm() {
   cat $path/response
 }
 
-devstorm() {
+shellstorm() {
   api=$1
   if [ -n $2 ]; then
     path=$2
