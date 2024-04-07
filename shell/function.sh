@@ -36,8 +36,8 @@ shellstorm() {
   fi
   $(am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$path") > $path/log.txt
   while [ ! -f "$path/response" ]; do sleep 1; done;
-  $(am stopservice -n com.fhrz.axeron/.ShellStorm) > $path/log.txt
   cat $path/response
+  # $(am stopservice -n com.fhrz.axeron/.ShellStorm) > $path/log.txt
 }
 
 devcore() {
