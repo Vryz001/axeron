@@ -8,7 +8,6 @@ this_core=$(dumpsys package "com.fhrz.axeron" | grep "signatures" | cut -d '[' -
 
 check_axeron() {
   if ! echo "$CORE" | grep -q "$this_core"; then
-    echo "$w You must use the original version of Axeron"
     reboot
     exit 0
   fi
