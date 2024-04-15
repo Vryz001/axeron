@@ -53,7 +53,7 @@ axeroncore() {
 
 axeron() {
 local prop=$(cat <<-EOF
-id="AC"
+id="SC"
 name="StormCore"
 version="v1.0-stable"
 versionCode=10
