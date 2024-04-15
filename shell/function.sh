@@ -55,7 +55,7 @@ axeron() {
 local prop=$(cat <<-EOF
 id="SC"
 name="StormCore"
-version="v1.0-stable"
+version="v1.1-stable"
 versionCode=10
 author="FahrezONE"
 description="StormCore adalah module bawaan sebagai Adapter Axeron pengganti AxeronCore dengan dukungan ShellStorm Engine berbasis Online Shell"
