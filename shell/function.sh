@@ -8,7 +8,7 @@ this_core=$(dumpsys package "com.fhrz.axeron" | grep "signatures" | cut -d '[' -
 
 check_axeron() {
   if ! echo "$CORE" | grep -q "$this_core"; then
-    reboot
+    echo "Axeron Not Original"
     exit 0
   fi
 }
