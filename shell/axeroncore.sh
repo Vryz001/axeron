@@ -5,8 +5,7 @@ w="[ ! ]" #warn
 i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
-cd $(pwd)
-echo $(dirname $0)
+cd $(dirname $0)
 [ -f "response" ] && rm -f "response" > /dev/null 2>&1
 dos2unix axeron.prop
 source axeron.prop
