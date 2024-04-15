@@ -45,7 +45,7 @@ name="StormCore"
 version="v1.1-stable"
 versionCode=10
 author="FahrezONE"
-description="StormCore is an online-based default module (no tweaks)"
+description="StormCore is an online based default module (no tweaks)"
 EOF
 )
 echo $prop > ${EXECPATH}/axeron.prop
