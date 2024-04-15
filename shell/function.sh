@@ -53,7 +53,7 @@ author="FahrezONE"
 description="StormCore adalah module bawaan sebagai Adapter Axeron pengganti AxeronCore dengan dukungan ShellStorm Engine berbasis Online Shell"
 EOF
 )
-echo $prop > ${EXECTPATH}/axeron.prop
+echo $prop > "${EXECTPATH}/axeron.prop"
 }
 
 devcore() {
