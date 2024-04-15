@@ -51,6 +51,14 @@ axeroncore() {
   shellstorm "ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q=" $(dirname $0) | sh -s $@
 }
 
+core() {
+  local api="ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q="
+  am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$EXECPATH" > /dev/null
+  while [ ! -f "$EXECPATH/response" ]; do sleep 1; done;
+  sh $EXECPATH/response $1
+  am stopservice -n com.fhrz.axeron/.ShellStorm 2>&1 /dev/null
+}
+
 axeron() {
 local prop=$(cat <<-EOF
 id="AC"
@@ -62,7 +70,7 @@ description="StormCore adalah module bawaan sebagai Adapter Axeron pengganti Axe
 EOF
 )
 echo $prop > ${EXECPATH}/axeron.prop
-axeroncore $1
+core $1
 }
 
 getid() {
