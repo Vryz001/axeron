@@ -13,19 +13,6 @@ check_axeron() {
   fi
 }
 
-bakshellstorm() {
-  api=$1
-  if [ -n $2 ]; then
-    path=$2
-  else
-    path=$EXECPATH
-  fi
-  am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$path" > /dev/null
-  while [ ! -f $path/response ]; do sleep 1; done;
-  am stopservice -n com.fhrz.axeron/.ShellStorm
-  cat $path/response
-}
-
 shellstorm() {
   api=$1
   if [ -n $2 ]; then
