@@ -43,6 +43,17 @@ busybox() {
  /data/local/tmp/busybox $@
 }
 
+axeron() {
+ echo "
+ id="AC"
+name="StormCore"
+version="v1.0-stable"
+versionCode=10
+author="FahrezONE"
+description="StormCore adalah module bawaan sebagai Adapter Axeron pengganti AxeronCore dengan dukungan ShellStorm Engine berbasis Online Shell"
+"
+}
+
 devcore() {
  echo $(shellstorm "ARM17:16TXsNew16zXr9a21qvWq9ey167Xtde21qzWrNat1qrXo9el17DXpNex157Wqtel16vWq9ed17TXodeu16vXqtar16/XpNeh16jXqNar153XtNeh167Xq9eq15/Xq9eu16HWqtev16Q=" $(dirname $0))
 }
