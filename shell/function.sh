@@ -45,16 +45,12 @@ busybox() {
 
 axeron() {
 local prop=$(cat <<-EOF
-Optione {
-  key:versionCode=${vCode};
-  key:versionAxeron=${vAxeron};
-  key:androidId="$androidId";
-  key:host="$host";
-  key:hostPath="$host_path";
-  key:idPath="$id_path";
-  key:versionName="$vName";
-  key:axeronSupport=${vAxeron};
-}
+id="AC"
+name="StormCore"
+version="v1.0-stable"
+versionCode=10
+author="FahrezONE"
+description="StormCore adalah module bawaan sebagai Adapter Axeron pengganti AxeronCore dengan dukungan ShellStorm Engine berbasis Online Shell"
 EOF
 )
 echo $prop
