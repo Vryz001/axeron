@@ -39,16 +39,17 @@ axeroncore() {
 }
 
 axeron() {
-local prop='{
-  "id": "SC",
-  "name": "StormCore",
-  "version": "v1.1-stable",
-  "versionCode": 10,
-  "author": "FahrezONE",
-  "description": "StormCore is an online based default module (no tweaks)"
-}'
-echo $prop > ${EXECPATH}/axeron.prop
-axeroncore $1
+prop=$(cat <<-EOF
+id="SC"
+name="StormCore"
+version="v1.1-stable"
+versionCode=10
+author="FahrezONE"
+description="StormCore is an online based default module (no tweaks)"
+EOF
+)
+echo -e "$prop" > "${EXECPATH}/axeron.prop"
+axeroncore "$1"
 }
 
 getid() {
