@@ -6,7 +6,7 @@ i="[ ? ]" #info
 p="[ • ]" #process
 s="[ ✓ ]" #success
 cd $(dirname $0)
-[ -f "response" ] && rm -f "response" > /dev/null 2>&1
+#[ -f "response" ] && rm -f "response" > /dev/null 2>&1
 dos2unix axeron.prop
 source axeron.prop
 brevent="me.piebridge.brevent"
