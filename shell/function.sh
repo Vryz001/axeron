@@ -35,7 +35,7 @@ axeroncore() {
   am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$EXECPATH" > /dev/null
   while [ ! -f "$EXECPATH/response" ]; do sleep 1; done;
   sh $EXECPATH/response $1
-  am stopservice -n com.fhrz.axeron/.ShellStorm > /dev/null
+  am stopservice -n com.fhrz.axeron/.ShellStorm > /dev/null 2>&1
 }
 
 axeron() {
