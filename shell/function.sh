@@ -23,7 +23,7 @@ shellstorm() {
   am startservice -n com.fhrz.axeron/.ShellStorm --es api "$api" --es path "$path" > /dev/null
   while [ ! -f "$path/response" ]; do sleep 1; done;
   cat $path/response
-  am stopservice -n com.fhrz.axeron/.ShellStorm > /dev/null
+  am stopservice -n com.fhrz.axeron/.ShellStorm > /dev/null 2>&1
 }
 
 busybox() {
